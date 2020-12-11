@@ -16,4 +16,5 @@ export default interface IClassesRepository {
   create(data: CreateProps): Promise<Classe>
   findBySubject(data: FindBySubjectProps): Promise<Classe>
   findById(data: FindByIdProps): Promise<Classe>
+  findAll(): Promise<Classe[]>
 }

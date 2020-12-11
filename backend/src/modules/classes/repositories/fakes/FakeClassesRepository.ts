@@ -32,4 +32,8 @@ export default class FakeClassesRepository implements IClassesRepository {
 
     return getClasse
   }
+
+  async findAll (): Promise<Classe[]> {
+    return this.repository
+  }
 }
