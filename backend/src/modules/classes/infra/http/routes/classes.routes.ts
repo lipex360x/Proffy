@@ -1,14 +1,19 @@
 import { Router } from 'express'
 
-import CreateClassesController from '../controllers/CreateClassesController'
 import ListClassesController from '../controllers/ListClassesController'
+import CreateClassesController from '../controllers/CreateClassesController'
+import CreateClassTeacherController from '../controllers/CreateClassTeacherController'
 
 const router = Router()
 
-const createClassesController = new CreateClassesController()
 const listClassesController = new ListClassesController()
 
-router.post('/', createClassesController.create)
+const createClassesController = new CreateClassesController()
+const createClassTeacherController = new CreateClassTeacherController()
+
 router.get('/', listClassesController.index)
+
+router.post('/', createClassesController.create)
+router.post('/classTeacher', createClassTeacherController.create)
 
 export default router

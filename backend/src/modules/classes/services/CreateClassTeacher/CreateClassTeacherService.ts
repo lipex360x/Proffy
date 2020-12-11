@@ -26,7 +26,7 @@ export default class CreateClassTeacherService {
     @inject('ClassTeacherRepository')
     private repository: IClassTeacherRepository,
 
-    @inject('IUsersRepository')
+    @inject('UsersRepository')
     private usersRepository: IUsersRepository,
 
     @inject('ClassesRepository')
