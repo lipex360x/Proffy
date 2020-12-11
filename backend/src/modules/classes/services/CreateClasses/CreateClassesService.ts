@@ -7,7 +7,6 @@ import IClassesRepository from '@modules/classes/repositories/interfaces/IClasse
 
 interface Request{
   subject: string
-  cost: number
 }
 
 @injectable()
@@ -17,12 +16,12 @@ export default class CreateClassesService {
     private repository: IClassesRepository
   ) {}
 
-  async execute ({ subject, cost }: Request): Promise<Classe> {
+  async execute ({ subject }: Request): Promise<Classe> {
     const getClass = await this.repository.findBySubject({ subject })
 
     if (getClass) throw new AppError('This class already exists')
 
-    const newClass = await this.repository.create({ subject, cost })
+    const newClass = await this.repository.create({ subject })
 
     return newClass
   }

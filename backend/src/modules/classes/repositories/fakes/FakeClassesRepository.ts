@@ -6,13 +6,12 @@ import IClassesRepository, { CreateProps, FindBySubjectProps } from '../interfac
 export default class FakeClassesRepository implements IClassesRepository {
   private repository: Classe[] = []
 
-  async create ({ subject, cost }:CreateProps): Promise<Classe> {
+  async create ({ subject }:CreateProps): Promise<Classe> {
     const classe = new Classe()
 
     Object.assign(classe, {
       class_id: uuid(),
       subject,
-      cost,
       created_at: new Date(),
       updated_at: new Date()
     })

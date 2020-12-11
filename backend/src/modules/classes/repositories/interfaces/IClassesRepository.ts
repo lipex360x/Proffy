@@ -2,7 +2,6 @@ import Classe from '@modules/classes/infra/typeorm/entities/Classe'
 
 export interface CreateProps {
   subject: string
-  cost: number
 }
 
 export interface FindBySubjectProps {

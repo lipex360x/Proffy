@@ -16,8 +16,7 @@ describe('CreateClasses', () => {
 
   it('should be able to create a class', async () => {
     const newClass = await createClassesService.execute({
-      subject: Faker.random.word(),
-      cost: 20.00
+      subject: Faker.random.word()
     })
 
     expect(newClass).toHaveProperty('class_id')
@@ -25,14 +24,12 @@ describe('CreateClasses', () => {
 
   it('shold not be able to create a class with subject duplicated', async () => {
     const newClass = await createClassesService.execute({
-      subject: Faker.random.word(),
-      cost: 20.00
+      subject: Faker.random.word()
     })
 
     await expect(
       createClassesService.execute({
-        subject: newClass.subject,
-        cost: 40.00
+        subject: newClass.subject
       })
     ).rejects.toBeInstanceOf(AppError)
   })

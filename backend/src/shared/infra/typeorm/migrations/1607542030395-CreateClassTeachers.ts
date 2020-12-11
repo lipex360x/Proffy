@@ -15,7 +15,7 @@ export default class CreateClassTeachers1607542030395 implements MigrationInterf
           {
             name: 'cost',
             type: 'decimal',
-            precision: 2
+            scale: 2
           },
 
           {

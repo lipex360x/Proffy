@@ -9,6 +9,7 @@ import {
   OneToMany
 } from 'typeorm'
 import Connections from './Connections'
+import Class_Teacher from '@modules/classes/infra/typeorm/entities/Class_Teacher'
 
 @Entity('users')
 export default class Users {
@@ -32,6 +33,9 @@ export default class Users {
 
   @OneToMany(() => Connections, conections => conections.users, {})
   conections: Connections[]
+
+  @OneToMany(() => Class_Teacher, class_teacher => class_teacher.user, {})
+  class_teacher: Class_Teacher[]
 
   @CreateDateColumn()
   created_at: Date;

@@ -5,8 +5,10 @@ import {
   PrimaryColumn,
   CreateDateColumn,
   UpdateDateColumn,
-  BeforeInsert
+  BeforeInsert,
+  OneToMany
 } from 'typeorm'
+import Class_Teacher from './Class_Teacher'
 
 @Entity('classes')
 export default class Classe {
@@ -16,8 +18,8 @@ export default class Classe {
   @Column()
   subject: string;
 
-  @Column({ precision: 2 })
-  cost: number;
+  @OneToMany(() => Class_Teacher, class_teacher => class_teacher.classe, {})
+  class_teacher: Class_Teacher[]
 
   @CreateDateColumn()
   created_at: Date;
