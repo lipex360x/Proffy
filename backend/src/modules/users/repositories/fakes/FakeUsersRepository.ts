@@ -1,7 +1,7 @@
 import { v4 as uuid } from 'uuid'
 
 import Users from '@modules/users/infra/typeorm/entities/Users'
-import IUsersRepository, { CreateProps, FindByEmailProps } from '../interfaces/IUsersRepository'
+import IUsersRepository, { CreateProps, FindByEmailProps, FindByIdProps } from '../interfaces/IUsersRepository'
 
 export default class FakeUsersRepository implements IUsersRepository {
   private repository: Users[] = []
@@ -27,6 +27,12 @@ export default class FakeUsersRepository implements IUsersRepository {
 
   async findByEmail ({ email }:FindByEmailProps): Promise<Users> {
     const getUser = this.repository.find(user => user.email === email)
+
+    return getUser
+  }
+
+  async findById ({ user_id }: FindByIdProps): Promise<Users> {
+    const getUser = this.repository.find(user => user.user_id === user_id)
 
     return getUser
   }
