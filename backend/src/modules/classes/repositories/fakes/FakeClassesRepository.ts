@@ -1,7 +1,7 @@
 import { v4 as uuid } from 'uuid'
 
 import Classe from '@modules/classes/infra/typeorm/entities/Classe'
-import IClassesRepository, { CreateProps, FindBySubjectProps } from '../interfaces/IClassesRepository'
+import IClassesRepository, { CreateProps, FindByIdProps, FindBySubjectProps } from '../interfaces/IClassesRepository'
 
 export default class FakeClassesRepository implements IClassesRepository {
   private repository: Classe[] = []
@@ -23,6 +23,12 @@ export default class FakeClassesRepository implements IClassesRepository {
 
   async findBySubject ({ subject }:FindBySubjectProps): Promise<Classe> {
     const getClasse = this.repository.find(classe => classe.subject === subject)
+
+    return getClasse
+  }
+
+  async findById ({ class_id }:FindByIdProps): Promise<Classe> {
+    const getClasse = this.repository.find(classe => classe.class_id === class_id)
 
     return getClasse
   }

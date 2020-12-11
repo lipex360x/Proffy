@@ -39,7 +39,9 @@ export default class Class_Teacher {
   @Column('uuid')
   class_id: string;
 
-  @OneToMany(() => Class_Schedule, class_schedule => class_schedule.class_teacher, {})
+  @OneToMany(() => Class_Schedule, class_schedule => class_schedule.class_teacher, {
+    cascade: true
+  })
   class_schedule: Class_Schedule[]
 
   @UpdateDateColumn()
