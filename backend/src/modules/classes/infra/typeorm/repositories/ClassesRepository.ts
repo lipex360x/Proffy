@@ -33,4 +33,8 @@ export default class ClassesRepository implements IClassesRepository {
 
     return getClass
   }
+
+  async findAll (): Promise<Classe[]> {
+    return this.repository.find()
+  }
 }
