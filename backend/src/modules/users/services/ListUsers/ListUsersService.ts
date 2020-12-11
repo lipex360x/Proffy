@@ -6,7 +6,7 @@ import IUsersRepository from '@modules/users/repositories/interfaces/IUsersRepos
 @injectable()
 export default class ListUsersService {
   constructor (
-    @inject('INJECT_REPOSITORY')
+    @inject('UsersRepository')
     private repository: IUsersRepository
   ) {}
 

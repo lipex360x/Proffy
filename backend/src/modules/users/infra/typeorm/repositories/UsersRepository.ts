@@ -33,4 +33,8 @@ export default class UsersRepository implements IUsersRepository {
 
     return getUser
   }
+
+  async findAll (): Promise<Users[]> {
+    return this.repository.find()
+  }
 }
