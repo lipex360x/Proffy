@@ -20,4 +20,5 @@ export default interface IUsersRepository {
   create(data: CreateProps): Promise<Users>
   findByEmail(data: FindByEmailProps): Promise<Users>
   findById(data: FindByIdProps): Promise<Users>
+  findAll(): Promise<Users[]>
 }

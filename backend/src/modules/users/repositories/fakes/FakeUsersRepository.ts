@@ -36,4 +36,8 @@ export default class FakeUsersRepository implements IUsersRepository {
 
     return getUser
   }
+
+  async findAll (): Promise<Users[]> {
+    return this.repository
+  }
 }
