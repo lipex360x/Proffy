@@ -1,0 +1,19 @@
+{
+  "Hook useEffect": {
+    "prefix": "useEffect",
+    "body": [
+      "  useEffect(() => {",
+      "    (async function () {",
+      "      // to do",
+      "    })()",
+      "  }, [])",
+      ""
+    ]
+  },
+}
+
+
+
+
+
+
