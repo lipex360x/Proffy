@@ -7,7 +7,7 @@ export const Section = styled.section`
   justify-content: center;
 
   h1 {
-    color: ${shade(0, '#fff')};
+    color: ${shade(0, '#333')};
     font-size: 3rem;
   }
 `
