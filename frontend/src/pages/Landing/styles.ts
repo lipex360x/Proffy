@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import { shade } from 'polished'
 
+const size = {
+  desktop: '1100px'
+}
+
 export const Section = styled.section`
   width: 100vh;
   height: 100vh;
@@ -13,21 +17,40 @@ export const Section = styled.section`
   background: var(--color-primary);
 
   span {
+    grid-area: total;
     font-size: 1.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    @media (min-width: ${size.desktop}) {
+      justify-content: flex-end;
+      font-size: 1rem;
+    }
+
     img {
       margin-left: 0.8rem;
     }
   }
+
+  @media (min-width: ${size.desktop}) {
+   .container {
+      max-width: ${size.desktop}; 
+      display: grid;
+      grid-template-rows: 350px 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-areas: 
+      "logo hero hero"
+      "buttons buttons total"
+    }
+  } 
 `
 
 export const LogoContainer = styled.div`
   text-align: center;
   margin-bottom: 3.2rem;
-
+  grid-area: logo;
+  
   img {
     height: 10rem;
   }
@@ -37,12 +60,27 @@ export const LogoContainer = styled.div`
     font-size: 2.4rem;
     line-height: 4.6rem;
     margin-top: 0.8rem;
+
+    @media (min-width: ${size.desktop}) {
+      text-align: initial;
+      font-size: 3.0rem;
+    }
+  }
+
+  @media (min-width: ${size.desktop}) {
+    align-self: center;
+    text-align: left;
+    margin: 0;
   }
 `
 
 export const HeroImage = styled.div`
+  grid-area: hero;
   img {
     width: 100%;
+  }
+  @media (min-width: ${size.desktop}) {
+    justify-self: end;
   }
 `
 
@@ -50,9 +88,10 @@ export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
   margin: 3.2rem 0;
-
+  grid-area: buttons;
+  
   a {
-    width: 30rem;
+    width: 28rem;
     height: 10.4rem;
     border-radius: 0.8rem;
     margin-right: 1.6rem;
@@ -67,6 +106,7 @@ export const ButtonsContainer = styled.div`
 
     img {
       width: 4rem;
+      margin-right: 2.4rem;
     }
 
     &.study {
@@ -88,5 +128,13 @@ export const ButtonsContainer = styled.div`
     & + a {
       margin-right: 0;
     }
-  }  
+
+    @media (min-width: ${size.desktop}) {
+      font-size: 2.4rem;
+    }
+  }
+
+  @media (min-width: ${size.desktop}) {
+    justify-content: flex-start;
+  }
 `
