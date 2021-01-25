@@ -36,12 +36,18 @@ export default createGlobalStyle`
   }
 
   body{
-    background: var(--color-background);
+    background: var(--color-primary);
     -webkit-font-smoothing: antialiased;
   }
 
   html, body, #root {
     height: 100vh
+  }
+
+  #root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   body, input, button, textarea {
