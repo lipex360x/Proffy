@@ -25,7 +25,8 @@ export const Section = styled.section`
 
     @media (min-width: ${size.desktop}) {
       justify-content: flex-end;
-      font-size: 1rem;
+      text-align: center;
+      font-size: 0.5rem;
     }
 
     img {
@@ -47,10 +48,10 @@ export const Section = styled.section`
 `
 
 export const LogoContainer = styled.div`
+  grid-area: logo;
   text-align: center;
   margin-bottom: 3.2rem;
-  grid-area: logo;
-  
+
   img {
     height: 10rem;
   }
@@ -76,9 +77,11 @@ export const LogoContainer = styled.div`
 
 export const HeroImage = styled.div`
   grid-area: hero;
+
   img {
     width: 100%;
   }
+
   @media (min-width: ${size.desktop}) {
     justify-self: end;
   }
@@ -89,7 +92,7 @@ export const ButtonsContainer = styled.div`
   justify-content: center;
   margin: 3.2rem 0;
   grid-area: buttons;
-  
+
   a {
     width: 28rem;
     height: 10.4rem;
