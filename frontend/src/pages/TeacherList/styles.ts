@@ -8,15 +8,30 @@ export const Section = styled.section`
 `
 
 export const Form = styled.form`
-  width: 90%;
-  margin: 3.2rem auto;
-
   label {
     color: var(--color-text-in-primary);
   }
 
+  @media (min-width: 700px) {
+    margin: 0 auto;
+    display: grid;
+    column-gap: 16px;
+  }
 `
-export const InputBlock = styled.div`
+
+export const InputList = styled.div`
+  width: 90%;
+  margin: 1.6rem auto;
+
+ @media (min-width: 700px) {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.6rem;
+  }
+`
+
+export const InputItem = styled.div`
   position: relative;
 
   & + div{
@@ -47,5 +62,11 @@ export const InputBlock = styled.div`
     left: 1.6rem;
     right: 1.6rem;
     bottom: 0;
+  }
+
+  @media (min-width: 700px) {
+    & + div{
+      margin-top: 0;
+    }
   }
 `

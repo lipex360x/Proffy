@@ -21,4 +21,14 @@
     ]
   },
   
+  "Media Query": {
+    "prefix": "styledMedia",
+    "body": [
+      "@media (min-width: ${1:PAGE_WIDTH}px) {",
+      "  ${2:CONTENT}",
+      "}",
+      "",
+    ]
+  },
+  
 }
