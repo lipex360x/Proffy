@@ -1,29 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import * as S from './styles'
-import { Link } from 'react-router-dom'
 
-import backIcon from '../../assets/images/icons/back.svg'
-import logo from '../../assets/images/logo.svg'
-// type HeaderProps = PropsWithChildren<{}>
+import Header from '../../components/Header'
 
 const TeacherList = () => {
   return (
     <S.Section>
+      <Header title='Estes são os Proffys disponíveis'>
+        <S.Form>
 
-      <S.TopBar className="container">
+          <S.InputBlock>
+            <label htmlFor="subject">Matéria</label>
+            <input type="text" name="subject" id="subject"/>
+          </S.InputBlock>
 
-        <Link to="/">
-          <img src={backIcon} alt="Icone voltar" />
-        </Link>
+          <S.InputBlock>
+            <label htmlFor="week_day">Dia da Semana</label>
+            <input type="text" name="week_day" id="week_day"/>
+          </S.InputBlock>
 
-        <img src={logo} alt="Logo Proffy" />
+          <S.InputBlock>
+            <label htmlFor="time">Hora</label>
+            <input type="text" name="time" id="time"/>
+          </S.InputBlock>
 
-      </S.TopBar>
-
-      <S.Container>
-        <strong>Estes são os proffys disponíveis</strong>
-      </S.Container>
-
+        </S.Form>
+      </Header>
     </S.Section>
   )
 }
