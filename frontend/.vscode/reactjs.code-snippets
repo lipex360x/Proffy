@@ -10,10 +10,15 @@
       ""
     ]
   },
+  
+  "Styled Components Export": {
+    "prefix": "styledExport",
+    "body": [
+      "export const ${1:NAME} = styled.${TYPE}`",
+      "",
+      "`",
+      ""
+    ]
+  },
+  
 }
-
-
-
-
-
-
