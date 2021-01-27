@@ -36,7 +36,7 @@ export default createGlobalStyle`
   }
 
   body{
-    background: var(--color-primary);
+    background: var(--color-background);
     -webkit-font-smoothing: antialiased;
   }
 
