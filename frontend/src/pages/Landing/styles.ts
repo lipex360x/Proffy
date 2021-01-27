@@ -6,7 +6,7 @@ const size = {
 }
 
 export const Section = styled.section`
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
 
   display: flex;
@@ -26,7 +26,6 @@ export const Section = styled.section`
     @media (min-width: ${size.desktop}) {
       justify-content: flex-end;
       text-align: center;
-      font-size: 0.5rem;
     }
 
     img {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import * as S from './styles'
+import { Link } from 'react-router-dom'
 
 // type HeaderProps = PropsWithChildren<{}>
 import logo from '../../assets/images/logo.svg'
@@ -23,15 +24,15 @@ const Landing = () => {
         </S.HeroImage>
 
         <S.ButtonsContainer>
-          <a href="" className="study">
+          <Link to="studies" className="study">
             <img src={studyIcon} alt="Estudar"/>
             Estudar
-          </a>
+          </Link>
 
-          <a href="" className="give-classes">
+          <Link to="teachers" className="give-classes">
             <img src={giveClassesIcon} alt="Dar Aula"/>
             Dar Aula
-          </a>
+          </Link>
         </S.ButtonsContainer>
 
         <span>
