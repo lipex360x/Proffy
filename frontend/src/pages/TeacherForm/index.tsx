@@ -6,7 +6,7 @@ import * as S from './styles'
 const TeacherForm = () => {
   return (
     <S.Section>
-      <h1>Hello TeacherForm</h1>
+      <h1>TeacherForm</h1>
       <p>Boilerplate ReactJS</p>
     </S.Section>
   )
