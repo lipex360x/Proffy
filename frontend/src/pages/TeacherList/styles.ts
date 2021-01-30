@@ -74,6 +74,13 @@ export const InputItem = styled.div`
 export const TeacherList = styled.main`
   margin: 3.2rem auto;
   width: 90%;
+  
+  @media (min-width: 700px) {
+    padding: 3.2rem 0;
+    max-width: 810px;
+    margin: 0 auto;  
+  }
+  
 `
 export const TeacherItem = styled.article`
   background: var(--color-box-base);
@@ -108,12 +115,21 @@ export const TeacherItem = styled.article`
         margin-top: 0.4rem;
       }
     }
+
+    @media (min-width: 700px) {
+      padding: 3.2rem
+    }
+    
   }
 
   p.teacherInfo {
     padding: 0 2rem;
     font-size: 1.6rem;
     line-height: 2.8rem;
+
+    @media (min-width: 700px) {
+      padding: 0 3.2rem
+    }
   }
 
   footer {
@@ -129,6 +145,12 @@ export const TeacherItem = styled.article`
       color: var(--color-primary);
       font-size: 1.6rem;
       display: block;
+
+      @media (min-width: 700px) {
+        display: initial;
+        margin-left: 1.6rem;
+      }
+      
     }
 
     button {
@@ -147,6 +169,20 @@ export const TeacherItem = styled.article`
       &:hover {
         background: var(--color-secondary-dark)
       }
+
+      @media (min-width: 700px) {
+        width: 24.5rem;
+        font-size: 1.6rem;
+        justify-content: center;
+
+        img {
+          margin-right: 1.6rem;
+        }
+      }
+    }
+
+    @media (min-width: 700px) {
+      padding: 3.2rem
     }
   }
 `
