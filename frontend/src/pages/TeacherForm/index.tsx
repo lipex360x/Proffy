@@ -7,7 +7,6 @@ const TeacherForm = () => {
   return (
     <S.Section>
       <h1>TeacherForm</h1>
-      <p>Boilerplate ReactJS</p>
     </S.Section>
   )
 }
