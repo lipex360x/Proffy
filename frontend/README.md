@@ -9,57 +9,34 @@
 
 #### :bookmark_tabs: Content Index
 
-- [Introduction](#zap-introduction)
-
 - [Setup](#zap-setup)
 
-- [Backend Technologies](#zap-backend-technologies)
+- [Technologies](#zap-technologies)
 
-- [Frontend Technologies](#zap-frontend-technologies)
-
----
-
-#### :zap: Introduction
-
-This is a code repository for the Proffy Project.
-
-Your Online Study Platform
+:house: [Return to Main Folder](https://github.com/lipex360x/Proffy)
 
 ---
+
 
 #### :zap: Setup
 
-Check more details to start this project in the back-end and front-end folders
+Clone the main repository, then enter this folder and run `npm i && npm start` to start the front-end.
 
-:pushpin: Tips: for easier navigation by gihub, consider installing the [Octotree](https://chrome.google.com/webstore/detail/octotree-github-code-tree/bkhaagjahfmjljalopjnoealnfndnagc) plugin
+If you prefer, install all dependencies using `yarn` and run `yarn start` to start.
 
----
+Check more details of this project in the back-end folder
 
-#### :zap: Backend Technologies
-
-```json
-  Express
-  Typescript
-  TypeORM
-  TDD with JEST
-  DDD with SOLID
-  Validation with Celebrate
-```
-
-:rocket: [Go to Backend Folder](https://github.com/lipex360x/Proffy/tree/master/backend)
+📌 Tips: for easier navigation by gihub, consider installing the [Octotree](https://chrome.google.com/webstore/detail/octotree-github-code-tree/bkhaagjahfmjljalopjnoealnfndnagc) Plugin
 
 ---
 
-#### :zap: Frontend Technologies
+#### :zap: Technologies
 
 ```json
  ReactJS
  Styled Components
- Leaflet Map
- React Dropzone
  Axios
 ```
-:rocket: [Go to Frontend Folder](https://github.com/lipex360x/Proffy/tree/master/frontend)
 
 ---
 
