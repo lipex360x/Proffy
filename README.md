@@ -37,7 +37,7 @@ Check more details to start this project in the back-end and front-end folders
 
 #### :zap: Backend Technologies
 
-```js
+```
   Express
   Typescript
   TypeORM
